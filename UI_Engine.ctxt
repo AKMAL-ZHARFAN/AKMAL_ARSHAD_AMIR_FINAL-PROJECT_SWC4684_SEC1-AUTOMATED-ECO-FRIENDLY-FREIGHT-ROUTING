@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=UI_Engine
+comment1.params=
+comment1.target=void\ MainMenu()
+comment2.params=Queue_Name
+comment2.target=void\ Queue_UI(java.lang.String)
+comment3.params=
+comment3.target=void\ Manifest_Settlement()
+comment4.params=
+comment4.target=void\ Stack_UI()
+comment5.params=
+comment5.target=void\ Summary()
+comment6.params=q1Size\ q2Size\ q3Size\ TotalParse\ TotalCarrier\ tax1\ tax2\ tax3
+comment6.target=void\ System_Summary(int,\ int,\ int,\ int,\ int,\ int,\ int,\ int)
+comment7.params=Source_Queue\ Backup_Queue\ Queue_Headline\ Queue_Name
+comment7.target=void\ Distributing_Routing_UI(java.util.Queue,\ java.util.Queue,\ java.lang.String,\ java.lang.String)
+comment8.params=Source_Stack
+comment8.target=void\ Manifest_Settlement_UI(java.util.Stack)
+numComments=9

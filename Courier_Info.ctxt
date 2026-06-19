@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=Courier_Info
+comment1.params=ID\ Name\ Type\ Item_ID\ Item_Type\ Score\ Date\ Time\ Tax
+comment1.target=Courier_Info(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ int)
+numComments=2
