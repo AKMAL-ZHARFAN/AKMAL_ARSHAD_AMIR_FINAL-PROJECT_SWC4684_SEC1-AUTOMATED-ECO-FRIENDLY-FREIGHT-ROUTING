@@ -29,6 +29,10 @@ public class UI_Engine{
         JOptionPane.showMessageDialog(null, "Collecting data for summary...");
     }
 
+     void System_Complete_UI(){
+        JOptionPane.showMessageDialog(null, "Automated Eco-Friendly Freight Routing complete!");
+    }
+
     void System_Summary(int q1Size, int q2Size, int q3Size, int TotalParse, int TotalCarrier, int tax1, int tax2, int tax3){
 
         JOptionPane.showMessageDialog(null, "===================================\n" + " SUPPLY SYSTEM SUMMARY \n" + "===================================\n\n" + "Total Record Parse: " + TotalParse + 
