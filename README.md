@@ -1,0 +1,1 @@
+Program to Automatically read supply_chain_manifest.txt to first Distribute in a Queue and display all the content inside the Queue and then push it all into the Stack and print all the content inside the Stack and finally will display a system a summary, no user input required.
