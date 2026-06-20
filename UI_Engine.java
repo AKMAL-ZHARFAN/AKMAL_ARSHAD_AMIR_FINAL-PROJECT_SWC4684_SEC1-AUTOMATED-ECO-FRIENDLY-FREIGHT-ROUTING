@@ -5,8 +5,6 @@ import java.util.ArrayList;
 
 public class UI_Engine{
 
-    int TotalCarrier = 1;
-
     ArrayList<Integer> totalTax_Queue = new ArrayList<>();
 
     void MainMenu(){
