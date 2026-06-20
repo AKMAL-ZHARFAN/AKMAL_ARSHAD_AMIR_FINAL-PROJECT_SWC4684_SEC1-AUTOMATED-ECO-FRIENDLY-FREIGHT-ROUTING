@@ -31,7 +31,7 @@ public class UI_Engine{
         JOptionPane.showMessageDialog(null, "Automated Eco-Friendly Freight Routing complete!");
     }
 
-    void System_Summary(int q1Size, int q2Size, int q3Size, int TotalParse, int TotalCarrier, int tax1, int tax2, int tax3){
+    void System_Summary(int q1Size, int q2Size, int q3Size, int TotalParse, int tax1, int tax2, int tax3){
 
         JOptionPane.showMessageDialog(null, "===================================\n" + " SUPPLY SYSTEM SUMMARY \n" + "===================================\n\n" + "Total Record Parse: " + TotalParse + 
             "\nTotal Carrier: " + (q1Size + q2Size + q3Size) + "\n\n------------------------------------\n" + "QUEUE DISTRIBUTION \n" + "------------------------------------\n\n" + 
