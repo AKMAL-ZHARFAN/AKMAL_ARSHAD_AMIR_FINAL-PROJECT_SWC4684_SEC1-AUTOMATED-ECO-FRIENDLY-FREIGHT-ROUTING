@@ -7,6 +7,8 @@ public class UI_Engine{
 
     ArrayList<Integer> totalTax_Queue = new ArrayList<>();
 
+    //UI method for readibility purposes only
+
     void MainMenu(){
         JOptionPane.showMessageDialog(null, "======AUTOMATED ECO-FRIENDLY FREIGHT ROUTING======");
     }
@@ -40,7 +42,8 @@ public class UI_Engine{
             "\nQueue 3: >>  RM" + tax3 + "\n\nGrand Total Carbon Tax: >>RM" + (tax1 + tax2 + tax3) + "<<");
 
     }
-
+    
+//method to display all content inside given Queue in parameter, maximum of 3 courier shown per cycle for clearer readibility
     void Distributing_Routing_UI(Queue <Courier_Info> Source_Queue, Queue<Courier_Info> Backup_Queue, String Queue_Headline, String Queue_Name){
 
         String oldID =  " ";
@@ -98,7 +101,7 @@ public class UI_Engine{
         totalTax_Queue.add(taxSum_Queue);
         line+= ("\n" + "==========================" + "\n\nTotal Carbon Tax for: \n" + Queue_Name + "\n >>RM" + taxSum_Queue + "\n\n ==========================");
         JOptionPane.showMessageDialog(null, line);
-
+//to restore the Queue back after the poll() method for further processing
         while(!Backup_Queue.isEmpty()){
 
             Source_Queue.offer(Backup_Queue.poll());
@@ -107,6 +110,8 @@ public class UI_Engine{
 
     }
 
+    
+//to display all the content inside the stack with maximum of 3 courier per cycle
     void Manifest_Settlement_UI(Stack<Courier_Info> Source_Stack){
 
         String oldID =  " ";
