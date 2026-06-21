@@ -1,4 +1,5 @@
 public class ShipmentInfo{
+    //class instances
     String shipmentId;
     String packageType; 
     String ecoPriorityScore; 
@@ -6,6 +7,7 @@ public class ShipmentInfo{
     int estimatedTransitTime; 
     int carbonTaxCost;
 
+    //constructor with parameter
     ShipmentInfo(String ID, String Type, String Score, String Date, int Time, int Tax){
 
         shipmentId = ID;
