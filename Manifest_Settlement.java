@@ -2,7 +2,8 @@ import java.util.Stack;
 import java.util.Queue;
 
 public class Manifest_Settlement{
-    
+
+    //push all content from each Queues into stack on 5 fixed batches
     Stack<Courier_Info> DispatchStack = new Stack<>();
     public void Dispatch(Queue<Courier_Info> q1, Queue<Courier_Info> q2, Queue<Courier_Info> q3){
         
