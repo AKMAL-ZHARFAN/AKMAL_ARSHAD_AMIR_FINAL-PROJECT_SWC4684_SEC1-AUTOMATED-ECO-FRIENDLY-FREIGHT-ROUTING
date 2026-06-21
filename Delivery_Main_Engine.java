@@ -5,9 +5,9 @@ public class Delivery_Main_Engine{
     Distributing_Routing DR = new  Distributing_Routing();
     Manifest_Settlement MS = new Manifest_Settlement();
     UI_Engine UI = new UI_Engine();
-    int totalParse;
-    String oldID;
-    int counter;
+    int totalParse; //to count total line in supply_chain_manifest.txt file
+    String oldID; //to detect id duplication
+    int counter; //to get index shipment element list inside carrier class
     void File_Reader(){
         try{
             FileReader fr = new FileReader("supply_chain_manifest.txt");
@@ -18,7 +18,8 @@ public class Delivery_Main_Engine{
 
             while((line = br.readLine()) != null){
                 StringTokenizer st = new StringTokenizer(line, "|");
-
+                
+              //each token is stored in local variable using nextToken() method
                 String ID = st.nextToken();
                 courier = st.nextToken();
                 String courier_type = st.nextToken();
@@ -29,7 +30,7 @@ public class Delivery_Main_Engine{
                 int Estimate_Time = Integer.parseInt(st.nextToken());
                 int Carbon_Tax = Integer.parseInt(st.nextToken());
 
-                if(!ID .equals(oldID) ){
+                if(!ID .equals(oldID) ){ 
                     DR.CI.add(new Courier_Info(ID, courier, courier_type, item_ID, item_type, eco_score, dispatch_date, Estimate_Time, Carbon_Tax));
                     counter++;
                     totalParse++;
@@ -38,6 +39,7 @@ public class Delivery_Main_Engine{
 
                 }
                 else{
+                    //group shipment under the same courier instead of duplicating the same courier
                     totalParse++;
                     DR.CI.get(counter - 1).items.add(new ShipmentInfo(item_ID, item_type, eco_score, dispatch_date, Estimate_Time, Carbon_Tax));
 
@@ -51,7 +53,8 @@ public class Delivery_Main_Engine{
         }
 
     }
-    
+
+    //the main program flow
     void System_ON(){
         
         UI.MainMenu();
